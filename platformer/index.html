@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Phaser&Tiled Christmas Project</title>
+    <script src="js/phaser.js"></script>
+    <script src='js/lvl1.js'></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <script>
+        var config = {
+            width: 240,
+            height: 160,
+            scale: {
+                mode: Phaser.Scale.FIT,
+                autoCenter: Phaser.Scale.CENTER_BOTH,
+                min: {
+                    width: 240,
+                    height: 160
+
+                },
+                max: {
+                    width: 1600,
+                    height: 900
+
+                }
+            },
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: {
+                        y: 400
+                    },
+                    debug: false 
+                }
+            },
+            scene: lvl1,
+        }
+
+        var game = new Phaser.Game(config);
+    </script>
+</body>
+</html>
